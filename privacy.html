@@ -2,36 +2,178 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - SoulLogic AI</title>
     <style>
-        body { font-family: -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 40px 20px; color: #333; }
-        h1, h2, h3 { color: #1A237E; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        th, td { border: 1px solid #eee; padding: 12px; text-align: left; }
-        th { background: #f4f4f4; }
+        :root {
+            --primary-color: #1A237E;
+            --text-color: #333;
+            --bg-color: #fff;
+            --secondary-bg: #f8f9fa;
+            --border-color: #eee;
+            --accent-bg: #e8eaf6;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        .nav-back {
+            display: inline-block;
+            margin-bottom: 32px;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+        .nav-back:hover { text-decoration: underline; }
+        
+        header { border-bottom: 2px solid var(--border-color); margin-bottom: 40px; padding-bottom: 20px; }
+        h1 { font-size: 2.2em; margin: 0 0 10px 0; color: #000; }
+        .last-updated { color: #666; font-size: 0.9em; font-style: italic; }
+        
+        h2 { font-size: 1.5em; margin-top: 48px; color: var(--primary-color); border-left: 4px solid var(--primary-color); padding-left: 15px; }
+        h3 { font-size: 1.1em; margin-top: 24px; font-weight: 700; color: #000; }
+        
+        p { margin-bottom: 16px; }
+        strong { color: #000; }
+        
+        .no-training-badge {
+            display: inline-block;
+            background-color: var(--accent-bg);
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 0.95em;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+        }
+        th { background-color: var(--secondary-bg); font-weight: 600; }
+        
+        ul { padding-left: 20px; margin-bottom: 24px; }
+        li { margin-bottom: 8px; }
+        
+        hr { border: 0; border-top: 1px solid var(--border-color); margin: 48px 0; }
+        
+        footer {
+            text-align: center;
+            font-size: 0.85em;
+            color: #888;
+            margin-top: 64px;
+        }
+        
+        @media (max-width: 600px) {
+            body { padding: 24px 16px; }
+            h1 { font-size: 1.8em; }
+            table { font-size: 0.85em; }
+        }
     </style>
 </head>
 <body>
-    <a href="/" style="text-decoration: none; color: #1A237E; font-weight: bold;">← Back to Home</a>
-    <h1>Privacy Policy</h1>
-    <p><em>Last Updated: February 25, 2026</em></p>
 
-    <h2>1. Introduction</h2>
-    <p>SoulLogic AI LLC is committed to protecting your privacy. We obtain affirmative consent for sensitive data processing.</p>
+    <a href="/" class="nav-back">← Back to Home</a>
 
-    <h2>2. Information We Collect</h2>
-    <p><strong>Voice Data:</strong> Raw audio is deleted immediately after transcription and is <strong>not stored</strong> on our servers.</p>
+    <header>
+        <h1>Privacy Policy</h1>
+        <p><strong>SoulLogic AI LLC</strong></p>
+        <div class="last-updated">Last Updated: February 25, 2026</div>
+    </header>
 
-    <h2>3. The "No Training" Pledge</h2>
-    <p><strong>We do not use your Chat Logs to train or fine-tune any AI or machine learning models.</strong></p>
+    <section>
+        <h2>1. Introduction & Acknowledgment</h2>
+        <p>SoulLogic AI LLC ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy describes our practices regarding the collection, use, and disclosure of your information. By using the Services, you acknowledge that we will handle your information as described herein. Where required by law, we will obtain your affirmative, express consent through separate in-app disclosures.</p>
+    </section>
 
-    <h2>5. Data Retention</h2>
-    <table>
-        <tr><th>Data Type</th><th>Retention Period</th></tr>
-        <tr><td>Chat Logs</td><td>30 days after account closure</td></tr>
-        <tr><td>Backups</td><td>Up to 90 days</td></tr>
-    </table>
+    <section>
+        <h2>2. Information We Collect</h2>
+        <h3>2.1 Information You Provide</h3>
+        <ul>
+            <li><strong>Account Data</strong> — Email address, username, and hashed passwords.</li>
+            <li><strong>Interaction Data (Chat Logs)</strong> — Text and voice inputs provided to the AI.</li>
+            <li><strong>Voice Data (BIPA Compliance)</strong> — We may process voice inputs to create text transcripts. We do not extract, store, or use biometric identifiers or voiceprints. Raw audio is deleted immediately after transcription is completed and is not stored on our servers.</li>
+        </ul>
 
-    <footer>© 2026 SoulLogic AI LLC. All rights reserved.</footer>
+        <h3>2.2 Automatically Collected Data</h3>
+        <p><strong>Technical Data</strong> — IP addresses, device identifiers, operating system versions, and app crash logs used for security and performance monitoring.</p>
+
+        <h3>2.3 Sensitive & Health Data</h3>
+        <ul>
+            <li><strong>Inferences</strong> — The AI may infer your mood or emotional state; we treat these inferences as sensitive data.</li>
+            <li><strong>Exclusion</strong> — We do not intentionally solicit government IDs or official medical records. If you voluntarily provide such information, it is stored only as part of unindexed chat logs.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. Purposes of Use & the "No Training" Pledge</h2>
+        <p><strong>3.1 Operational Use</strong> — We use your data to provide AI companionship, process subscriptions, and maintain service security.</p>
+        <div class="no-training-badge">3.2 No Training</div>
+        <p><strong>We do not use your Chat Logs to train or fine-tune any AI or machine learning models</strong>. We use de-identified metadata solely to improve system latency and safety patterns (e.g., abuse detection).</p>
+    </section>
+
+    <section>
+        <h2>4. Data Sharing & Third-Party Disclosures</h2>
+        <p><strong>4.1 Data Roles</strong> — SoulLogic AI LLC is the Data Controller.</p>
+        <p><strong>4.2 AI Processors</strong> — To provide functionality, we transmit inputs to third-party AI providers (e.g., Google Gemini API) acting as our Data Processors. These providers are contractually prohibited from using your data for their own model training or product improvement.</p>
+        <p><strong>4.3 Cross-Border Transfers</strong> — Data is stored on secure US-based servers. For international users, we utilize Standard Contractual Clauses (SCCs) to ensure equivalent data protection.</p>
+    </section>
+
+    <section>
+        <h2>5. Data Retention & Your Rights</h2>
+        <h3>5.1 Retention Schedule</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data Type</th>
+                    <th>Retention Period</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Chat Logs</td>
+                    <td>Retained until deletion or account closure. Purged from production systems within <strong>30 days</strong>.</td>
+                </tr>
+                <tr>
+                    <td>Backups</td>
+                    <td>Residual copies may persist in encrypted backups for up to <strong>90 days</strong>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>5.2 Your Rights (CA, CT, WA, GDPR)</h3>
+        <p>Depending on your jurisdiction, you have the right to access your data, delete your data, or exercise portability.</p>
+        <p><strong>We do not "sell" or "share" your personal information as those terms are defined under the California Consumer Privacy Act (CCPA)</strong>.</p>
+        <p>Submit requests to: <a href="mailto:contact@soullogicai.com"><strong>contact@soullogicai.com</strong></a>.</p>
+    </section>
+
+    <section>
+        <h2>6. Security Incidents</h2>
+        <p>If we learn of a security incident, we will investigate and notify affected users and regulators within the timeframes required by law (typically 30–60 days).</p>
+    </section>
+
+    <section>
+        <h2>7. Children's Privacy</h2>
+        <p>The Services are intended for users aged 18 and older. If we learn a minor is using the Services, we will promptly suspend the account and delete the associated data.</p>
+    </section>
+
+    <footer>
+        <hr>
+        <p>© 2026 SoulLogic AI LLC. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

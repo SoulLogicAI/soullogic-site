@@ -2,37 +2,146 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - SoulLogic AI</title>
     <style>
-        body { font-family: -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 40px 20px; color: #333; }
-        h1, h2 { color: #1A237E; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 30px; }
-        .back-link { text-decoration: none; color: #1A237E; font-weight: bold; }
-        blockquote { background: #f9f9f9; border-left: 5px solid #ccc; margin: 1.5em 10px; padding: 10px 20px; font-style: italic; }
-        hr { border: 0; border-top: 1px solid #eee; margin: 40px 0; }
-        footer { margin-top: 50px; font-size: 0.8em; color: #888; text-align: center; }
+        :root {
+            --primary-color: #1A237E;
+            --text-color: #333;
+            --bg-color: #fff;
+            --secondary-bg: #f8f9fa;
+            --border-color: #eee;
+            --warning-bg: #fff8e1;
+            --warning-border: #ffca28;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        .nav-back {
+            display: inline-block;
+            margin-bottom: 32px;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+        .nav-back:hover { text-decoration: underline; }
+        
+        header { border-bottom: 2px solid var(--border-color); margin-bottom: 40px; padding-bottom: 20px; }
+        h1 { font-size: 2.2em; margin: 0 0 10px 0; color: #000; }
+        .last-updated { color: #666; font-size: 0.9em; font-style: italic; }
+        
+        h2 { font-size: 1.5em; margin-top: 48px; color: var(--primary-color); border-left: 4px solid var(--primary-color); padding-left: 15px; }
+        h3 { font-size: 1.1em; margin-top: 24px; }
+        
+        p { margin-bottom: 16px; }
+        strong { color: #000; }
+        
+        .alert-box {
+            background-color: var(--warning-bg);
+            border: 1px solid var(--warning-border);
+            border-radius: 8px;
+            padding: 24px;
+            margin: 32px 0;
+        }
+        .emergency-box {
+            background-color: #ffebee;
+            border: 1px solid #ef5350;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        ul { padding-left: 20px; margin-bottom: 24px; }
+        li { margin-bottom: 8px; }
+        
+        hr { border: 0; border-top: 1px solid var(--border-color); margin: 48px 0; }
+        
+        footer {
+            text-align: center;
+            font-size: 0.85em;
+            color: #888;
+            margin-top: 64px;
+        }
+        
+        @media (max-width: 600px) {
+            body { padding: 24px 16px; }
+            h1 { font-size: 1.8em; }
+        }
     </style>
 </head>
 <body>
-    <a href="/" class="back-link">← Back to Home</a>
-    <h1>Terms of Service</h1>
-    <p><strong>SoulLogic AI LLC</strong> | <em>Last Updated: February 25, 2026</em></p>
-    
-    <hr>
 
-    <h2>1. Acceptance, Eligibility & Termination</h2>
-    <p><strong>1.1 Binding Agreement</strong> — By accessing SoulLogic AI, you agree to these Terms. If you do not agree, discontinue use immediately.</p>
-    <p><strong>1.2 Eligibility & Minors</strong> — You must be at least 18 years of age. We do not knowingly collect data from minors.</p>
-    <p><strong>1.3 Modifications</strong> — We may modify these Terms at any time. Changes will be notified via email or in-app notice.</p>
+    <a href="/" class="nav-back">← Back to Home</a>
 
-    <h2>2. Mandatory Medical & Psychological Disclaimer</h2>
-    <blockquote><strong>⚠️ READ THIS SECTION CAREFULLY</strong></blockquote>
-    <p><strong>2.1 For Entertainment Only</strong> — SoulLogic AI is provided for informational and entertainment purposes only. AI responses must not be interpreted as a diagnosis or treatment.</p>
-    <p><strong>2.2 No Professional Relationship</strong> — The AI is not a licensed therapist. Use does not create a doctor-patient relationship.</p>
-    <p><strong>2.4 Emergency Protocol</strong> — <strong>🚨 DO NOT USE THIS SERVICE FOR EMERGENCIES.</strong> If you are in crisis, call <strong>911</strong> or <strong>988</strong> immediately.</p>
+    <header>
+        <h1>Terms of Service</h1>
+        <p><strong>SoulLogic AI LLC</strong></p>
+        <div class="last-updated">Last Updated: February 25, 2026</div>
+    </header>
 
-    <h2>6. Dispute Resolution</h2>
-    <p><strong>6.1 Binding Arbitration</strong> — Disputes will be resolved by binding arbitration in Pittsburgh, PA, administered by the <strong>AAA</strong>.</p>
-    
-    <footer>© 2026 SoulLogic AI LLC. All rights reserved.</footer>
+    <section>
+        <h2>1. Acceptance, Eligibility & Termination</h2>
+        <p><strong>1.1 Binding Agreement</strong> — By accessing SoulLogic AI, you agree to these Terms. If you do not agree, discontinue use immediately.</p>
+        <p><strong>1.2 Eligibility & Minors</strong> — You must be at least 18 years of age. We do not knowingly collect data from minors. If we discover a user is under 18, we reserve the right to terminate the account immediately without notice.</p>
+        <p><strong>1.3 Modifications</strong> — We may modify these Terms at any time. Changes will be notified via email or in-app notice.</p>
+        <p><strong>1.4 Termination</strong> — We reserve the right to suspend or terminate your account for any violation of these Terms or for any reason at our sole discretion.</p>
+    </section>
+
+    <section class="alert-box">
+        <h2>2. Mandatory Medical & Psychological Disclaimer</h2>
+        <p><strong>⚠️ READ THIS SECTION CAREFULLY</strong></p>
+        <p><strong>2.1 For Entertainment Only</strong> — SoulLogic AI is provided for informational and entertainment purposes only. AI responses must not be interpreted as a diagnosis, treatment, or intervention for any physical or mental health condition.</p>
+        <p><strong>2.2 No Professional Relationship</strong> — Use of the Services does not create a therapist–patient, doctor–patient, or any professional relationship. <strong>The AI is not a licensed therapist</strong>.</p>
+        <p><strong>2.3 Assumption of Specific Risks</strong> — You explicitly acknowledge that:</p>
+        <ul>
+            <li>AI outputs may be inaccurate, misleading, or emotionally inappropriate.</li>
+            <li>The AI cannot recognize real-world psychological crises or physical emergencies.</li>
+            <li>You assume full responsibility for any delay in seeking professional medical care due to reliance on AI outputs.</li>
+        </ul>
+
+        <div class="emergency-box">
+            <strong>🚨 DO NOT USE THIS SERVICE FOR EMERGENCIES.</strong><br>
+            If you have thoughts of self-harm or suicide, call <strong>911</strong> or <strong>988</strong> (U.S. Suicide & Crisis Lifeline) immediately.
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Data Privacy & Third-Party Disclosure</h2>
+        <p><strong>3.1 Privacy Policy & Health Data Notice</strong> — Use of the Services is subject to our Privacy Policy and Health Data Notice.</p>
+        <p><strong>3.2 Third-Party API Disclosure</strong> — Our Services utilize third-party APIs (e.g., Google Gemini). Your interactions are processed by these providers.</p>
+        <p><strong>3.3 Data Limitation</strong> — You are prohibited from inputting Social Security Numbers, financial details, or official medical records.</p>
+    </section>
+
+    <section>
+        <h2>4. Intellectual Property & User Content</h2>
+        <p><strong>4.1 Feedback License</strong> — You grant SoulLogic AI LLC a perpetual, irrevocable, worldwide license to use any feedback you provide.</p>
+        <p><strong>4.2 Generated Content</strong> — Outputs are generated by AI and may not be unique to you.</p>
+    </section>
+
+    <section>
+        <h2>5. Limitation of Liability & Indemnity</h2>
+        <p><strong>5.1 Liability Cap</strong> — Our total liability shall not exceed the amount you paid us in the last 12 months. If no payments were made, our liability is capped at <strong>$100.00</strong>.</p>
+        <p><strong>5.2 Indemnification</strong> — You agree to indemnify SoulLogic AI LLC against any claims arising from your use of the Services.</p>
+    </section>
+
+    <section>
+        <h2>6. Dispute Resolution: Arbitration & Class Waiver</h2>
+        <p><strong>6.1 Binding Arbitration</strong> — Any dispute shall be resolved by binding arbitration in Pittsburgh, PA, administered by the <strong>American Arbitration Association (AAA)</strong>.</p>
+        <p><strong>6.2 Class Action Waiver</strong> — <strong>YOU AND SOULLOGIC AI LLC AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING</strong>.</p>
+    </section>
+
+    <footer>
+        <hr>
+        <p>© 2026 SoulLogic AI LLC. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

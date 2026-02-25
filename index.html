@@ -3,41 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoulLogic AI - Digital Wellness & Companionship</title>
+    
+    <title>SoulLogic AI | Ethical AI for Digital Wellness</title>
+    <meta name="description" content="SoulLogic AI LLC is building the next generation of empathetic AI companions, focusing on digital wellness and privacy-preserving companionship.">
+    <meta name="keywords" content="AI Companion, Digital Wellness, Privacy AI, SoulLogic AI, Mental Support AI">
+    
+    <meta property="og:title" content="SoulLogic AI - Privacy-First Digital Companionship">
+    <meta property="og:description" content="A research-driven AI startup dedicated to ethical wellness and secure virtual companionship.">
+    <meta property="og:url" content="https://soullogicai.app">
+    <meta property="og:type" content="website">
+
     <style>
-        body { font-family: -apple-system, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 20px; text-align: center; }
-        .logo { font-size: 2em; font-weight: bold; color: #000; }
-        .tagline { color: #666; font-size: 1.2em; margin-bottom: 40px; }
-        .disclaimer { font-size: 0.9em; color: #888; border: 1px solid #eee; padding: 20px; margin: 40px 0; border-radius: 8px; }
-        footer { margin-top: 60px; font-size: 0.8em; border-top: 1px solid #eee; padding-top: 20px; }
-        .legal-links a { text-decoration: none; color: #1A237E; margin: 0 10px; font-weight: 500; }
-        .legal-links a:hover { text-decoration: underline; }
+        :root {
+            --primary: #1A237E; /* 深靛蓝：代表专业与信任 */
+            --accent: #4CAF50;  /* 森林绿：代表成长与健康 */
+            --text: #333;
+            --bg: #fff;
+        }
+        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: var(--text); max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        
+        /* Hero Section */
+        .hero { padding: 60px 0; text-align: center; }
+        .logo { font-size: 2.5em; font-weight: 800; color: #000; letter-spacing: -1px; }
+        .tagline { font-size: 1.3em; color: #666; margin: 20px 0 40px; }
+        
+        /* CTA Button */
+        .btn-waitlist { background: var(--primary); color: white; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+        .btn-waitlist:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        /* Trust & Safety Section (New) */
+        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 60px 0; text-align: left; }
+        .feature-card { border: 1px solid #eee; padding: 25px; border-radius: 12px; background: #fafafa; }
+        .feature-card h3 { color: var(--primary); margin-top: 0; }
+        
+        .disclaimer { font-size: 0.9em; color: #777; border: 1px solid #eee; padding: 25px; margin: 50px 0; border-radius: 12px; line-height: 1.5; background: #fffdf9; }
+        
+        footer { border-top: 1px solid #eee; margin-top: 80px; padding-top: 40px; font-size: 0.85em; color: #888; text-align: center; }
+        .legal-links a { text-decoration: none; color: var(--primary); margin: 0 10px; font-weight: 500; }
+        
+        @media (max-width: 600px) { .features { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-    <div class="logo">SoulLogic AI</div>
-    <p class="tagline">Next-Generation AI for Digital Wellness and Virtual Companionship.</p>
-    
-    <section>
-        <p>SoulLogic AI LLC is a research-driven software startup specializing in generative AI APIs for interactive text experiences. We are building intelligent companions that support digital wellness through empathetic conversation.</p>
+
+    <header class="hero">
+        <div class="logo">SoulLogic AI</div>
+        <p class="tagline">Next-Generation AI for Digital Wellness and Virtual Companionship.</p>
+        <a href="mailto:contact@soullogicai.com?subject=Join Waitlist" class="btn-waitlist">Join the Waitlist</a>
+    </header>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>Ephemeral by Design</h3>
+            <p>Our infrastructure is built to process user data in RAM, ensuring that sensitive interactions are destroyed immediately after use.</p>
+        </div>
+        <div class="feature-card">
+            <h3>PII Stripping</h3>
+            <p>Advanced technical safeguards automatically remove personally identifiable information before any model optimization occurs.</p>
+        </div>
     </section>
 
     <div class="disclaimer">
-        <strong>Important Notice:</strong> SoulLogic AI provides software for entertainment and research purposes only. Our services are <strong>not clinical medical or therapeutic services</strong> and should not be used as a substitute for professional mental health advice.
+        <strong>Medical Disclaimer:</strong> SoulLogic AI provides software for entertainment and research purposes only. Our services are <strong>not clinical medical or therapeutic services</strong> and are not a substitute for professional mental health advice.
     </div>
 
     <footer>
         <p><strong>SoulLogic AI LLC</strong></p>
-        <p>Registered Entity No: 0015197309 | EIN: 41-4308581</p>
-        <p>15 Exeter Street, Pittsburgh, PA 15217, USA</p>
-        <p>Contact: <a href="mailto:contact@soullogicai.com">contact@soullogicai.com</a></p>
-        
+        <p>Entity No: 0015197309 | EIN: 41-4308581</p>
+        <p>Pittsburgh, PA, USA</p>
         <p class="legal-links">
             <a href="privacy.html">Privacy Policy</a> | 
             <a href="terms.html">Terms of Service</a> | 
             <a href="health-data.html">Health Data Notice</a>
         </p>
-        <p style="color: #aaa; margin-top: 20px;">© 2026 SoulLogic AI LLC. All rights reserved.</p>
+        <p style="margin-top: 20px;">© 2026 SoulLogic AI LLC. All rights reserved.</p>
     </footer>
+
 </body>
 </html>

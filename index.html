@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>SoulLogic AI | Ethical AI for Digital Wellness</title>
-    <meta name="description" content="Next-generation AI for digital wellness and deep virtual companionship, built with privacy as our guiding principle.">
+    <title>SoulLogic AI | A Quiet, Steady Presence</title>
+    <meta name="description" content="A privacy-first digital sanctuary. Experience high-fidelity emotional and spiritual companionship built for your peace of mind.">
     <meta property="og:title" content="SoulLogic AI | A Safe Space for Your Mind">
     <meta property="og:description" content="Experience high-fidelity emotional support with absolute privacy. Join the waitlist today.">
     <meta property="og:type" content="website">
@@ -13,14 +13,15 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            /* Calmer, more professional color palette */
-            --primary: #0F172A; /* Deep Slate Blue */
+            /* Soulful & Serene Color Palette */
+            --primary: #0F172A; /* Midnight Slate */
             --primary-light: #334155;
-            --accent: #2563EB; /* Trustworthy Royal Blue */
+            --accent: #4F46E5; /* Deep Indigo - Calmer, more spiritual than standard blue */
+            --accent-glow: rgba(79, 70, 229, 0.4);
             --text-main: #1E293B;
             --text-muted: #64748B;
             --bg-color: #F8FAFC;
@@ -32,79 +33,98 @@
             line-height: 1.6; 
             color: var(--text-main); 
             margin: 0; 
-            background: var(--bg-color); 
+            /* Subtle radial gradient to create a "focused/lit" center effect */
+            background: radial-gradient(circle at top center, #FFFFFF 0%, #F1F5F9 100%);
+            min-height: 100vh;
             -webkit-font-smoothing: antialiased;
         }
         
-        .container { max-width: 900px; margin: 0 auto; padding: 80px 20px; text-align: center; }
+        .container { max-width: 900px; margin: 0 auto; padding: 100px 20px 80px; text-align: center; }
         
         /* Hero Section */
-        header { padding: 40px 0 60px; animation: fadeIn 1s ease-out; }
-        .logo { font-size: 3.2em; font-weight: 800; color: var(--primary); letter-spacing: -1.5px; margin-bottom: 10px; }
-        .tagline { font-size: 1.25em; color: var(--text-muted); margin: 0 auto 40px; max-width: 650px; font-weight: 400; }
+        header { padding: 0 0 70px; animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+        .logo { font-size: 3.5em; font-weight: 800; color: var(--primary); letter-spacing: -1.8px; margin-bottom: 16px; line-height: 1.1; }
+        .tagline { font-size: 1.35em; color: var(--text-muted); margin: 0 auto 45px; max-width: 680px; font-weight: 300; line-height: 1.5; }
+        .highlight { color: var(--accent); font-weight: 500; }
         
+        /* Breathing Button Animation */
+        @keyframes breathe {
+            0% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(79, 70, 229, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0); }
+        }
+
         .btn-primary { 
             background: var(--accent); 
             color: white; 
-            padding: 16px 42px; 
+            padding: 18px 48px; 
             border-radius: 50px; 
             text-decoration: none; 
-            font-weight: 600; 
-            font-size: 1.1em; 
+            font-weight: 500; 
+            font-size: 1.15em; 
             border: none; 
             cursor: pointer; 
-            transition: all 0.3s ease; 
-            box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); 
+            box-shadow: 0 8px 20px -6px var(--accent-glow);
+            animation: breathe 3s infinite;
         }
         .btn-primary:hover { 
-            transform: translateY(-2px); 
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.23); 
-            background: #1D4ED8;
+            transform: translateY(-3px); 
+            box-shadow: 0 12px 24px -8px var(--accent-glow); 
+            background: #4338CA;
+            animation: none; /* Stop breathing on hover */
         }
 
         /* Feature Cards */
         .features { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 24px; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 28px; 
             margin: 40px 0; 
             text-align: left; 
+            animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
         }
         .feature-card { 
             background: var(--card-bg); 
-            padding: 32px; 
-            border-radius: 20px; 
-            border: 1px solid #E2E8F0;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            transition: transform 0.3s ease;
+            padding: 36px; 
+            border-radius: 24px; 
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.05);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .feature-card:hover { transform: translateY(-5px); }
-        .feature-card h3 { color: var(--primary); margin-top: 0; font-size: 1.2em; font-weight: 600; letter-spacing: -0.5px; }
-        .feature-card p { color: var(--text-muted); font-size: 0.95em; margin-bottom: 0; }
+        .feature-card:hover { 
+            transform: translateY(-6px); 
+            box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.1);
+            border-color: rgba(79, 70, 229, 0.2);
+        }
+        .feature-card h3 { color: var(--primary); margin-top: 0; font-size: 1.25em; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 12px; }
+        .feature-card p { color: var(--text-muted); font-size: 1em; margin-bottom: 0; line-height: 1.6; font-weight: 300; }
         
         /* Modal Styles */
-        #modalOverlay { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(15, 23, 42, 0.6); backdrop-filter: blur(6px); opacity: 0; transition: opacity 0.3s ease; }
+        #modalOverlay { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(15, 23, 42, 0.7); backdrop-filter: blur(8px); opacity: 0; transition: opacity 0.4s ease; }
         #modalOverlay.active { opacity: 1; }
-        .modal { background: white; max-width: 440px; margin: 8% auto; padding: 40px; border-radius: 24px; position:relative; box-shadow: 0 25px 50px rgba(0,0,0,0.25); text-align: left; transform: scale(0.95); transition: transform 0.3s ease; }
-        #modalOverlay.active .modal { transform: scale(1); }
-        .close-btn { position:absolute; right:24px; top:24px; cursor:pointer; font-size:28px; color: #CBD5E1; transition: color 0.2s; line-height: 1; }
+        .modal { background: white; max-width: 460px; margin: 6% auto; padding: 48px; border-radius: 28px; position:relative; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); text-align: left; transform: translateY(20px) scale(0.95); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        #modalOverlay.active .modal { transform: translateY(0) scale(1); }
+        .close-btn { position:absolute; right:28px; top:24px; cursor:pointer; font-size:32px; color: #CBD5E1; transition: color 0.2s; line-height: 1; font-weight: 300; }
         .close-btn:hover { color: var(--primary); }
         
         form label { display:block; font-size: 0.9em; font-weight: 500; margin-bottom: 8px; color: var(--primary-light); }
-        form input[type="text"], form input[type="email"], form textarea { width:100%; padding:14px; margin-bottom: 20px; border: 1px solid #CBD5E1; border-radius: 12px; font-size: 1em; box-sizing: border-box; font-family: inherit; transition: border-color 0.2s; background: #F8FAFC; }
-        form input:focus, form textarea:focus { outline: none; border-color: var(--accent); background: #FFF; }
+        form input[type="text"], form input[type="email"], form textarea { width:100%; padding:16px; margin-bottom: 24px; border: 1px solid #E2E8F0; border-radius: 14px; font-size: 1em; box-sizing: border-box; font-family: inherit; transition: all 0.2s; background: #F8FAFC; color: var(--text-main); }
+        form input:focus, form textarea:focus { outline: none; border-color: var(--accent); background: #FFF; box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1); }
+        form textarea { resize: vertical; min-height: 100px; }
         
-        .checkbox-container { display: flex; align-items: flex-start; margin-bottom: 24px; }
-        .checkbox-container input { margin-top: 4px; margin-right: 12px; cursor: pointer; }
-        .checkbox-container label { font-size: 0.85em; color: var(--text-muted); font-weight: 400; margin-bottom: 0; cursor: pointer; }
+        .checkbox-container { display: flex; align-items: flex-start; margin-bottom: 32px; background: #F8FAFC; padding: 16px; border-radius: 12px; border: 1px solid #E2E8F0; }
+        .checkbox-container input { margin-top: 5px; margin-right: 14px; cursor: pointer; transform: scale(1.1); accent-color: var(--accent); }
+        .checkbox-container label { font-size: 0.85em; color: var(--text-muted); font-weight: 400; margin-bottom: 0; cursor: pointer; line-height: 1.5; }
 
         /* Footer */
-        footer { border-top: 1px solid #E2E8F0; margin-top: 80px; padding: 40px 0; font-size: 0.9em; color: var(--text-muted); text-align: center; }
-        .legal-links a { text-decoration: none; color: var(--accent); margin: 0 12px; font-weight: 500; transition: color 0.2s; }
-        .legal-links a:hover { color: var(--primary); }
+        footer { border-top: 1px solid rgba(226, 232, 240, 0.8); margin-top: 100px; padding: 50px 0; font-size: 0.9em; color: var(--text-muted); text-align: center; animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both; }
+        .legal-links { margin-top: 28px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+        .legal-links a { text-decoration: none; color: var(--text-muted); font-weight: 500; transition: color 0.2s; font-size: 0.95em; }
+        .legal-links a:hover { color: var(--accent); }
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        @media (max-width: 600px) { .modal { margin: 15% 20px; padding: 30px; } header { padding: 20px 0 40px; } .logo { font-size: 2.5em; } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @media (max-width: 600px) { .modal { margin: 10% 20px; padding: 32px; } header { padding: 0 0 40px; } .logo { font-size: 2.8em; } .tagline { font-size: 1.15em; } .container { padding-top: 60px; } }
     </style>
 </head>
 <body>
@@ -112,64 +132,64 @@
     <div class="container">
         <header>
             <div class="logo">SoulLogic AI</div>
-            <p class="tagline">Next-generation AI for digital wellness and deep virtual companionship, built with absolute privacy as our guiding principle.</p>
-            <button onclick="toggleModal(true)" class="btn-primary">Join the Waitlist</button>
+            <p class="tagline">A quiet, steady presence. <br>High-fidelity emotional and <span class="highlight">spiritual companionship</span>, built on a foundation of absolute privacy.</p>
+            <button onclick="toggleModal(true)" class="btn-primary">Request Early Access</button>
         </header>
 
         <section class="features">
             <div class="feature-card">
                 <h3>Ephemeral by Design</h3>
-                <p>Sensitive interaction data is processed entirely in RAM and irreversibly destroyed immediately after your session ends.</p>
+                <p>A true digital sanctuary. Sensitive interactions are processed strictly in RAM and completely vanish the moment your session ends.</p>
             </div>
             <div class="feature-card">
-                <h3>Privacy First</h3>
-                <p>Automated, state-of-the-art safeguards de-identify and protect your personal narrative before any system optimization.</p>
+                <h3>Absolute Privacy</h3>
+                <p>We do not train on your pain. Automated, state-of-the-art protocols de-identify and protect your personal narrative at all times.</p>
             </div>
             <div class="feature-card">
-                <h3>Advanced AI Architecture</h3>
-                <p>Powered by custom multi-modal Large Language Models (LLMs) to ensure deep, empathetic, and latency-free responses.</p>
+                <h3>Advanced Architecture</h3>
+                <p>Powered by custom multi-modal Large Language Models (LLMs) to ensure deep, empathetic, and latency-free understanding.</p>
             </div>
             <div class="feature-card">
-                <h3>Research Foundation</h3>
-                <p>Bridging rigorous academic methodology with cutting-edge AI innovation to provide genuinely safe emotional support.</p>
+                <h3>Rigorous Foundation</h3>
+                <p>Bridging academic rigor with cutting-edge AI innovation to provide a safe space for your mind, ethically and transparently.</p>
             </div>
         </section>
 
         <footer>
-            <p style="color: var(--primary); font-weight: 600; margin-bottom: 8px;">SoulLogic AI LLC</p>
-            <p style="margin-top: 0;">Contact: <a href="mailto:steve@soullogicai.app" style="color: var(--accent); text-decoration: none;">steve@soullogicai.app</a></p>
-            <p style="font-size: 0.85em;">Registered Entity No: 0015197309 | EIN: 41-4308581<br>Pittsburgh, PA, USA</p> 
-            <div class="legal-links" style="margin-top: 24px;">
+            <p style="color: var(--primary); font-weight: 600; margin-bottom: 8px; font-size: 1.1em;">SoulLogic AI LLC</p>
+            <p style="margin-top: 0;">Contact: <a href="mailto:steve@soullogicai.app" style="color: var(--accent); text-decoration: none; font-weight: 500;">steve@soullogicai.app</a></p>
+            <p style="font-size: 0.85em; opacity: 0.8; margin-top: 16px;">Registered Entity No: 0015197309 | EIN: 41-4308581<br>Pittsburgh, PA, USA</p> 
+            <div class="legal-links">
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms of Service</a>
                 <a href="health-data.html">Health Data Notice</a>
             </div>
-            <p style="margin-top: 24px; font-size: 0.8em;">© 2026 SoulLogic AI LLC. All rights reserved.</p>
+            <p style="margin-top: 32px; font-size: 0.8em; opacity: 0.7;">© 2026 SoulLogic AI LLC. All rights reserved.</p>
         </footer>
     </div>
 
     <div id="modalOverlay">
         <div class="modal">
             <span class="close-btn" onclick="toggleModal(false)">&times;</span>
-            <h2 style="margin:0 0 8px 0; color:var(--primary); font-size: 1.5em; letter-spacing: -0.5px;">Request Early Access</h2>
-            <p style="font-size:0.95em; color:var(--text-muted); margin-bottom:24px; line-height: 1.5;">We manually review all applications to maintain a safe, empathetic, and highly curated community.</p>
+            <h2 style="margin:0 0 12px 0; color:var(--primary); font-size: 1.7em; letter-spacing: -0.5px;">Join the Sanctuary</h2>
+            <p style="font-size:0.95em; color:var(--text-muted); margin-bottom:32px; line-height: 1.6;">We manually review all applications to maintain a safe, empathetic, and highly curated digital environment.</p>
             
             <form action="https://formspree.io/f/mwvnypdq" method="POST">
                 <label>Full Name</label>
-                <input type="text" name="name" placeholder="John Doe" required>
+                <input type="text" name="name" placeholder="How should we address you?" required>
                 
                 <label>Email Address</label>
-                <input type="email" name="email" placeholder="john@example.com" required>
+                <input type="email" name="email" placeholder="your@email.com" required>
                 
-                <label>Why are you seeking connection with SoulLogic?</label>
-                <textarea name="interest" rows="3" placeholder="Tell us a bit about what brings you here..."></textarea>
+                <label>What brings you to SoulLogic?</label>
+                <textarea name="interest" placeholder="Share a little about what you are seeking in a digital companion..." required></textarea>
                 
                 <div class="checkbox-container">
                     <input type="checkbox" id="privacy-consent" name="privacy_consent" required>
                     <label for="privacy-consent">I acknowledge that SoulLogic AI is not a replacement for professional medical or psychiatric care, and I agree to the <a href="privacy.html" style="color: var(--accent); text-decoration: underline;">Privacy Policy</a>.</label>
                 </div>
                 
-                <button type="submit" class="btn-primary" style="width:100%; border-radius:12px; padding: 14px;">Submit Application</button>
+                <button type="submit" class="btn-primary" style="width:100%; border-radius:14px; padding: 16px; animation: none;">Submit Application</button>
             </form>
         </div>
     </div>
@@ -184,13 +204,22 @@
                 overlay.classList.add('active');
             } else {
                 overlay.classList.remove('active');
-                setTimeout(() => { overlay.style.display = 'none'; }, 300);
+                setTimeout(() => { overlay.style.display = 'none'; }, 400); // Matched with CSS transition duration
             }
         }
+        
+        // Close modal on clicking outside
         window.onclick = function(event) {
             let overlay = document.getElementById('modalOverlay');
             if (event.target == overlay) toggleModal(false);
         }
+        
+        // Allow escape key to close modal
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && document.getElementById('modalOverlay').classList.contains('active')) {
+                toggleModal(false);
+            }
+        });
     </script>
 </body>
 </html>

@@ -96,9 +96,24 @@
         .feature-card h3 { color: var(--primary); margin-top: 0; font-size: 1.25em; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 12px; }
         .feature-card p { color: var(--text-muted); font-size: 1em; margin-bottom: 0; line-height: 1.6; font-weight: 300; }
         
-        #modalOverlay { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(15, 23, 42, 0.7); backdrop-filter: blur(8px); opacity: 0; transition: opacity 0.4s ease; }
+        /* 修复后的弹窗背景层：支持小屏幕滚动 */
+        #modalOverlay { 
+            display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; 
+            background:rgba(15, 23, 42, 0.7); backdrop-filter: blur(8px); 
+            opacity: 0; transition: opacity 0.4s ease; 
+            overflow-y: auto; 
+            -webkit-overflow-scrolling: touch; 
+        }
         #modalOverlay.active { opacity: 1; }
-        .modal { background: white; max-width: 460px; margin: 6% auto; padding: 48px; border-radius: 28px; position:relative; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); text-align: left; transform: translateY(20px) scale(0.95); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        
+        /* 修复后的弹窗本体：保证上下留白安全区 */
+        .modal { 
+            background: white; max-width: 460px; 
+            margin: 8vh auto 8vh auto; 
+            padding: 48px; border-radius: 28px; position:relative; 
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); text-align: left; 
+            transform: translateY(20px) scale(0.95); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); 
+        }
         #modalOverlay.active .modal { transform: translateY(0) scale(1); }
         
         /* Fixed accessibility for Close Button */
@@ -120,7 +135,7 @@
         .legal-links a:hover, .legal-links a:focus { color: var(--accent); outline: none; }
 
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        @media (max-width: 600px) { .modal { margin: 10% 20px; padding: 32px; } header { padding: 0 0 40px; } .logo { font-size: 2.8em; } .tagline { font-size: 1.15em; } .container { padding-top: 60px; } }
+        @media (max-width: 600px) { .modal { margin: 5vh 20px; padding: 32px; } header { padding: 0 0 40px; } .logo { font-size: 2.8em; } .tagline { font-size: 1.15em; } .container { padding-top: 60px; } }
     </style>
 </head>
 <body>
